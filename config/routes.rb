@@ -1,5 +1,13 @@
 Practice::Application.routes.draw do
-  resources :catergories
+  get "categories/index"
+
+  get "categories/show"
+
+  get "categories/edit"
+
+  get "categories/new"
+
+  resources :categories, :articles
 
   get "articles/index"
 
@@ -9,18 +17,7 @@ Practice::Application.routes.draw do
 
   get "articles/new"
 
-  get "catergories/index"
-
-  get "catergories/show"
-
-  get "catergories/edit"
-
-  get "catergories/new"
-
   get "home/index"
-
-  resources :articles
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

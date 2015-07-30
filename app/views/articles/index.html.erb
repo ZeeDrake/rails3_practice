@@ -1,7 +1,20 @@
 <h1><strong> Z-New Articles </strong></h1>
 <br>
-<% @articles.each do |article|
-	<h3><%= article.title %></h3>
-	<h3><%= article.body %></h3>
-<% end %>	
 
+<table>
+	<tr>
+		<th> Title </th>
+		<th> Body </th>
+		<th> Author </th>
+		<th> Category</th>
+	</tr>
+
+<% @articles.each do |article| %>
+	<tr>
+			<td><%= article.title %></td>
+			<td><%= article.body %></td>
+			<td><%= article.author %></td>
+			<td><%= article.category %></td>
+	</tr>	
+<% end %>
+</table>
